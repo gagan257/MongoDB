@@ -38,10 +38,42 @@
 
 <a href="#"><img width="80%" height="auto" src="Images/8add-in-path.png" height="100px"/></a>
 
-`press ok ok ok for save and exit`
+`press ok-ok-ok for save and exit`
 
-## Use
+## Commands in MongoDB v6.0.5
 
-**1. MongoDB version check** `> mongod -version`
-**2. Login to mongosh terminal** `> mongosh`
-**3. Check databases** `> show dbs || show databases`
+**1. MongoDB version check** 
+```shell
+$ mongod -version
+```
+**2. Login to mongosh terminal** 
+```shell
+$ mongosh
+```
+**3. Check databases** 
+```shell
+$ show dbs || show databases
+```
+
+**4. Select existing or make new database**
+```shell
+$ use database_name
+```
+
+**5. View current selected database**
+```shell
+$ db
+```
+**6. Drop/Delete Database (delete current selected db)**
+```shell
+$ db.dropDatabase()
+```
+**7. Check collections in any selected database**
+```shell
+$ show collections
+```
+
+**8. Create new collection in any selected database**
+```shell
+$ db.createCollection('collection_name')
+```
