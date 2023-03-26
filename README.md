@@ -9,7 +9,7 @@
 
 <a href="#"><img width="80%" height="auto" src="Images/1download-mongodb.png" height="100px"/></a>
 
-`--> Install package (complete)`
+`--> Install package (Complete Installation)`
 
 <a href="#"><img width="100%" height="auto" src="Images/2complete-install.png" height="100px"/></a>
 
@@ -20,10 +20,25 @@
 `--> Check "Install MongoDB compass" during setup`
 
 <a href="#"><img width="100%" height="auto" src="Images/4compass-install.png" height="100px"/></a>
+`-------------------- After setup is Done ---------------------`
 
 `--> Go to mongoDB installed files & copy bin location`
 
 <a href="#"><img width="100%" height="auto" src="Images/5bin-location.png" height="100px"/></a>
+
+`Search "enviroment variables" in windows`
+
+<a href="#"><img width="80%" height="auto" src="Images/6enviroment-var.png" height="100px"/></a>
+
+`Select "path" in "User variable for xxx" and press edit`
+
+<a href="#"><img width="80%" height="auto" src="Images/7user-path.png" height="100px"/></a>
+
+`click "new" and paste the copied path of bin` 
+
+<a href="#"><img width="80%" height="auto" src="Images/8add-in-path.png" height="100px"/></a>
+
+`press ok ok ok for save and exit`
 
 ## Use
 
