@@ -40,6 +40,25 @@
 
 `press ok-ok-ok for save and exit`
 
+**2. Setup mongosh (mongoDB shell)**
+
+`visit:` https://www.mongodb.com/try/download/shell
+
+`--> Download version 1.8.0 | windows 64 bit(8.1+) | zip`
+
+<a href="#"><img width="80%" height="auto" src="Images/9mongosh-download.png" height="100px"/></a>
+
+`--> Go to downloads, unzip package & copy the following location`
+
+<a href="#"><img width="100%" height="auto" src="Images/10mongosh-location.png" height="100px"/></a>
+
+`--> Paste the copied location at the same location where we pasted mongoDB earlier`
+`i.e. enviroment variables > user variables`
+
+<a href="#"><img width="80%" height="auto" src="Images/6enviroment-var.png" height="100px"/></a>
+
+<a href="#"><img width="80%" height="auto" src="Images/7user-path.png" height="100px"/></a>
+
 ## Commands in MongoDB v6.0.5
 
 **1. MongoDB version check** 
@@ -67,7 +86,7 @@ $ db
 **6. Drop/Delete Database (delete current selected db)**
 ```shell
 $ db.dropDatabase()
-```
+``` 
 **7. Check collections in any selected database**
 ```shell
 $ show collections
@@ -76,4 +95,17 @@ $ show collections
 **8. Create new collection in any selected database**
 ```shell
 $ db.createCollection('collection_name')
+```
+
+**9. Delete any collection from selected database**
+```shell
+$  db.'collection_name'.drop()
+```
+
+**10. Insert data in any collection in any selected database**
+```shell
+db.collection_name.insert({
+    "name": "sample",
+    "age": 22,
+})
 ```
