@@ -67,11 +67,11 @@ $ mongod -version
 ```
 **2. Login to mongosh terminal** 
 ```shell
-$ mongosh
+$ mongosh      # activate mongoDB terminal
 ```
 **3. Check databases** 
 ```shell
-$ show dbs || show databases
+$ show dbs || show databases    # Show all the databases present
 ```
 
 **4. Select existing or make new database**
@@ -102,10 +102,65 @@ $ db.createCollection('collection_name')
 $  db.'collection_name'.drop()
 ```
 
-**10. Insert data in any collection in any selected database**
+**10. Insert row in any collection in any selected database**
 ```shell
-db.collection_name.insert({
+$ db.collection_name.insert({
     "name": "sample",
     "age": 22,
 })
 ```
+**11. Insert multiple row in any collection in any selected database**
+```shell
+$ db.collection_name.insertMany([{
+    "name": "sample",
+    "age": 22,
+},
+{
+    "name": "sample 2",
+    "age": 21,
+    "address":"sample address goes here"
+},
+{
+    "name": "sample 3",
+    "age": 26,
+    "address":"sample address goes here",
+    "phone":"123456789"
+}
+])
+```
+**12. See all the inserted rows in collection**
+```shell
+$ db.collection_name.find()                     # display all the rows present in collection
+$ db.collection_name.find().pretty()            # show all the present rows in pretty/clean way
+$ db.collection_name.find().pretty().limit(num_here)    # setting max number of rows that can be displayed
+$  db.content.findOne({attribute:'value'})  # It finds one match and display it. If many present it will find one and stop
+```
+
+**13. Find in collection with attribute(matching)**
+```shell
+$ db.collection_name.find({attribute:'value'})                          # In case of int no need to use ''
+$ db.collection_name.find({attribute1:'value'}, {attribute2:'value'})   # works as 'and' operator  
+```
+
+**14. Count the number of rows found by find() function**
+```shell
+$ db.collection_name.find().count()     # It will print total rows present no matter what limit is set
+```
+
+**15. Sorting the data(ascending & descending order)**
+```shell
+$ db.collection_name.find().sort({attribute:1})     # sorts on the basis of attribute in ascending order(1)
+$ db.collection_name.find().sort({attribute:-1})    # sorts on the basis of attribute in descending order(-1)
+```
+**16. Update a Row**
+```shell
+db.comments.updateOne({name: 'Shubham'},
+{   'name': 'Harry',
+    'lang': 'JavaScript',
+    'member_since': 51
+}, {upsert: true})
+ # it will update the row(if available), or insert new row if no match is found
+```
+
+**17.Update Operators**
+`visit:` https://www.mongodb.com/docs/manual/reference/operator/update/
